@@ -97,7 +97,7 @@ function doOperation (operation, callback)
       value = clone(value);
 
       //call the caller callback
-      operation.callback(err, value);
+      if(operation.callback) operation.callback(err, value);
 
       //call the queue callback
       callback();
@@ -121,7 +121,7 @@ function doOperation (operation, callback)
       value = clone(value);
 
       //call the caller callback
-      operation.callback(err, value);
+      if(operation.callback) operation.callback(err, value);
 
       //call the queue callback
       callback();
@@ -146,7 +146,7 @@ function doOperation (operation, callback)
       value = clone(value);
 
       //call the caller callback
-      operation.callback(err, value);
+      if(operation.callback) operation.callback(err, value);
 
       //call the queue callback
       callback();
